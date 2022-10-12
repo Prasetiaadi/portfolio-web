@@ -30,7 +30,7 @@ export default function Skills({ skills }: Props) {
           <Skill key={skill._id} skill={skill} />
         ))}
         {skills?.slice(skills.length / 2).map((skill) => (
-          <Skill key={skill._id} skill={skill} directionLeft/>
+          <Skill key={skill._id} skill={skill} directionLeft />
         ))}
       </div>
     </motion.div>
