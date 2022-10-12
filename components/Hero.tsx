@@ -28,7 +28,7 @@ export default function Hero({ pageInfo }: Props) {
         alt="profile"
       />
       <div className="z-20">
-        <h2 className="text-md uppercase text-gray-200 pb-8 tracking-[18px]">{pageInfo?.role}</h2>
+        <h2 className="text-md uppercase text-gray-200 pb-8 tracking-[10px]">{pageInfo?.role}</h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#C74B50" />
