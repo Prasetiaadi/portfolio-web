@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
-import { url } from 'inspector';
 
 type Props = {
   projects: Project[];
@@ -34,10 +33,10 @@ function Projects({ projects }: Props) {
               className="flex flex-shrink-0 h-52 w-68 mx-auto object-cover md:w-62 md:h-86 xl:w-[500px] xl:h-[300px]"
             />
 
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
               <h4 className="text-3xl font-semibold text-center">
-                <span className="underline decoration-[#C74B50]">
-                  Projects {i + 1} of {projects.length}:
+                <span>
+                  Projects {i + 1} of {projects.length} :{' '}
                 </span>
                 {project?.title}
               </h4>

@@ -65,13 +65,16 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky bottom-2 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <img
+            {/* <img
               className="h-14 w-22 mb-0 cursor-pointer"
               src="/img/fontpras.png"
               alt="footer.img"
-            />
+            /> */}
+            <p className="flex items-center justify-center pb-3 text-sm text-red-400">
+              Made With Love By Prasetia ♥ || 2022
+            </p>
           </div>
-          {/* <p className="flex items-center justify-center m-0 text-sm">Prasetia Adiprakasa</p> */}
+          {/* <p className="flex items-center justify-center m-0 text-lg">Prasetia Adiprakasa</p> */}
         </footer>
       </Link>
     </div>
