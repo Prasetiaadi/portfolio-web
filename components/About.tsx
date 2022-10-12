@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{
@@ -32,21 +36,16 @@ export default function About({}: Props) {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        src="/img/7.png"
+        src={urlFor(pageInfo?.profilePic).url()}
         alt="profile2"
         className="-mb-20 md:mb-0 flex-shrink-0 rounded-full h-64 w-56 mx-auto object-cover md:rounded-full md:w-62 md:h-86 xl:w-[300px] xl:h-[400px]"
       />
 
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
-          A <span className="underline decoration-[#C74B50]">little</span> backgound
+          A <span className="underline decoration-[#C74B50]">little</span> background of me
         </h4>
-        <p className="text-base">
-          Saya berorientasi pada tujuan untuk mengejar perubahan karir jangka panjang dalam bidang
-          frontend developer. Memiliki pengalaman dibidang Project Management selama 4 tahun dan
-          sedang mencari pengalaman serius dibidang IT. Memiliki keterampilan Analysis, Management
-          Project dan Problem Solving yang baik. Mampu berkaloborasi antar tim.
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
